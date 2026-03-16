@@ -41,6 +41,25 @@ Each screen state has a corresponding `draw*()` function called from `render()`.
 ### Audio
 Procedural — `beep(freq, dur, type, vol, freqEnd)` via Web Audio API. Named wrappers: `sndHit`, `sndHurt`, `sndDie`, `sndLevel`, etc.
 
+## Git workflow
+
+After every meaningful change, commit and push to GitHub so work is never lost:
+
+```bash
+git add monster_shooter_v6.html   # or CLAUDE.md if updated
+git commit -m "short description of what changed"
+git push
+```
+
+Commit message conventions:
+- `feat: add <thing>` — new feature or mechanic
+- `fix: <bug>` — bug fix
+- `balance: <change>` — tuning numbers, wave params, etc.
+- `ui: <change>` — visual/layout changes
+- `docs: <change>` — CLAUDE.md or changelog only
+
+Push after every patch, not just at the end of a session.
+
 ## Editing conventions
 
 When writing patch plans, always include the **exact** `old_string` and `new_string` for every change (copy-pasted verbatim from the file). This lets edits be applied with zero file reads during implementation.
